@@ -1,0 +1,1787 @@
+    /*中间技能部分*/
+    /*span{*/
+       /*font-family: "微软雅黑";*/
+    /*}*/
+    #content{
+        position: relative;
+        display:block;
+        width:100%;
+        margin:0px auto;
+        overflow:hidden;
+    }
+    #content .job{
+        position: absolute;
+        z-index:2;
+        opacity:1;
+    }
+    #content .role{
+        position: absolute;
+        z-index:1;
+    }
+    #content .skill{
+        position: absolute;
+        display:block;
+        width:380px;
+        height:960px;
+        /*background-color: #0a0;*/
+        top:0px;
+        right:0px;
+        z-index:9;
+        /*opacity:0;*/
+        transition:all 1.0s ease-out 0.8s;
+        /*transform: translateX(400px);*/
+
+    }
+    /*#content .skill.show{*/
+    /*opacity:1;*/
+    /*/!*transform: translateX(0px);*!/*/
+
+    /*}*/
+    #content .skill .skill-wrap{
+    position:absolute;
+    display:block;
+    width:246px;
+    padding:0 30px;
+    height:100%;
+    background:rgba(0,0,0,0.8);
+    }
+    .skill-wrap .job-title{
+    height:82px;
+    margin:100px auto 0 auto;
+    background: url("../images/job-title.png") no-repeat;
+    }
+    .skill .skill-nav{
+    position: absolute;
+    display:block;
+    width:74px;
+    height:100%;
+    top:0px;
+    right:0px;
+    }
+    .skill-nav .nav-wrap{
+    position: absolute;
+    width:44px;
+    height:640px;
+    top:50%;
+    left:50%;
+    margin-left:-22px;
+    margin-top:-320px;
+    }
+    .skill-nav span{
+    position:relative;
+    display:block;
+    width:44px;
+    height:44px;
+    margin:7px auto;
+    cursor:pointer;
+    background:url("../images/icon_1.png") no-repeat;
+    }
+    .skill-nav span:after{
+    position:absolute;
+    display:none;
+    content:"";
+    left:-15px;
+    bottom:17px;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-left: 8px solid rgba(0,0,0,0.8);
+    border-bottom: 6px solid transparent;
+    }
+    .skill-nav span.active:after{
+    display:block;
+    }
+    .skill-wrap .skill-desc{
+    font-size:14px;
+    color:#fff;
+    position: relative;
+    text-indent:58px;
+    margin:18px 0px;
+    }
+    .skill-desc i{
+        position: absolute;
+        display:block;
+        width:44px;
+        height:44px;
+        left:0px;
+        top:-4px;
+        background:url("../images/icon.png") no-repeat;
+        background-position:-57px -1112px;
+    }
+    .skill-desc p.skill-title{
+    color:#fff;
+    line-height:1.6;
+    text-indent:0;
+    margin-top:24px;
+    padding:8px 0;
+    }
+    .circle{
+        position: relative;
+        display:block;
+        width:252px;
+        height:252px;
+        margin:0 auto;
+    }
+    .circle .c-outer{
+        position: absolute;
+        display:block;
+        width:100%;
+        height:100%;
+        z-index:2;
+        left:0;
+        top:0;
+        background: url("../images/circle-outer1.png");
+        animation: rotateL 12s linear infinite;
+    }
+    .circle .c-inner{
+        position: absolute;
+        display:block;
+        z-index:1;
+        width:144px;
+        height:144px;
+        left:50%;
+        top:50%;
+        margin-left:-72px;
+        margin-top:-72px;
+        background: url("../images/circle-inner1.png");
+    }
+    .circle .c-inner.active{
+        animation: rotateR 12s linear infinite;
+    }
+    .circle .three{
+    position: absolute;
+    display:block;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    z-index:4;
+    }
+    .circle .three.active{
+    animation: rotateR 12s linear infinite;
+    }
+    .circle .item{
+    position: absolute;
+    display:block;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    z-index:5;
+    cursor: pointer;
+    border:1px solid #fff;
+    }
+    .circle .item:before{
+    position: absolute;
+    content:"";
+    display:block;
+    width:100%;
+    height:100%;
+    left:0px;
+    top:0px;
+    z-index:1;
+    background:url("../images/icon_1.png") no-repeat -236px 2px;
+    }
+    .circle .item:after{
+    position: absolute;
+    content:"";
+    display:block;
+    z-index:1;
+    background:url("../images/icon_1.png") no-repeat;
+    }
+    .circle .item1:after{
+    width:31px;
+    height:28px;
+    left:15px;
+    top:16px;
+    background-position:-84px -110px;
+    }
+    .circle .item2:after{
+    width:29px;
+    height:31px;
+    left:15px;
+    top:15px;
+    background-position:-130px -110px;
+    }
+    .circle .item3:after{
+    width:37px;
+    height:38px;
+    left:12px;
+    top:11px;
+    background-position:-176px -110px;
+    }
+    .circle .item span{
+    position: absolute;
+    display:none;
+    width:100%;
+    height:100%;
+    z-index:4;
+    text-align:center;
+    line-height:60px;
+    text-indent:0px;
+    border-radius:60px;
+    font-style: normal;
+    transition:all 0.4s ease-out;
+    }
+    .circle .item:hover span{
+    display:block;
+    }
+    .circle .item:hover:after{
+    display:none;
+    }
+    .circle .item.active span{
+
+    display:block;
+    cursor: default;
+    background-color:rgba(0,85,204,0.95);
+    }
+    .circle .item1{
+        position: absolute;
+        left:96px;
+        top:10px;
+    }
+    .circle .item2{
+        position: absolute;
+        left:22px;
+        bottom:51px;
+    }
+    .circle .item3{
+        position: absolute;
+        right:22px;
+        bottom:51px;
+    }
+    .circle .middle{
+    position: absolute;
+    display:block;
+    width:100px;
+    height:100px;
+    left:50%;
+    top:50%;
+    z-index:6;
+    cursor:pointer;
+    margin-left:-50px;
+    margin-top:-50px;
+    border-radius:50%;
+    background: url("../images/circle-middle.png") no-repeat;
+    }
+    .circle .middle.ready{
+    cursor:pointer;
+    }
+    .circle .middle.active{
+    cursor: default;
+    }
+    .circle .middle span{
+    text-indent:0px;
+    position: absolute;
+    display:none;
+    width:100%;
+    height:100%;
+    text-align: center;
+    line-height:100px;
+    color:#858484;
+    }
+    .circle .middle.ready span{
+    display:block;
+    }
+    .circle .middle:hover span{
+    display: block;
+    }
+    .circle .middle.active span{
+    display: block;
+    color:#fff;
+    }
+    .clicktips{
+    position: absolute;
+    display:block;
+    width:164px;
+    height:25px;
+    text-align: center;
+    line-height:25px;
+    font-size:12px;
+    color:#fff;
+    text-indent:0px;
+    left:-34px;
+    top:-10px;
+    /*opacity:0;*/
+    transition:all 0.6s ease-out;
+
+    }
+    .circle .forbid:hover .clicktips{
+    opacity:1;
+    top:0;
+    }
+    .clicktips em{
+    width: 0;
+    height: 0;
+    position: absolute;
+    left:80px;
+    bottom:-5px;
+    border-left:6px solid transparent;
+    border-right:6px solid transparent;
+    }
+    .tips{
+    text-align: center;
+    text-indent:0px;
+    font-size:14px;
+    line-height:1.6;
+    padding:8px;
+    margin:10px auto;
+    border-radius:4px;
+    }
+    .detail .row{
+    padding:10px 0px;
+    }
+    .detail span{
+    text-indent:0px;
+    float: left;
+    }
+    .detail p{
+    text-indent:0px;
+    display:table-cell;
+    color:#4f5156;
+    transition:all 0.4s ease-out;
+
+    }
+    .detail p.active{
+    color:#fff;
+    }
+
+    /*wrap1====破军府====*/
+    .wrap1{
+        background:url("../images/5-bg.jpg") no-repeat top center #1571d9;
+        height:960px;
+    }
+    .wrap1 .job{
+        background:url("../images/job5.png") no-repeat top center;
+        width:418px;
+        height:487px;
+        left:0px;
+        top:260px;
+        z-index:1;
+    }
+    .wrap1 .role{
+        background: url("../images/role5.png") no-repeat top center;
+        width: 1228px;
+        height: 962px;
+        right:-30%;
+        top:-70px;
+        z-index:1;
+    }
+    .wrap1 .skill-wrap .job-title{
+        background-position: 0px -365px;
+    }
+    .wrap1 .skill-nav .nav1{
+        background-position:-382px -484px;
+    }
+    .wrap1 .skill-nav .nav1.active{
+        background-position:-434px -484px;
+    }
+    .wrap1 .skill-nav .nav2{
+        background-position:-382px -540px;
+    }
+    .wrap1 .skill-nav .nav2.active{
+        background-position:-434px -540px;
+    }
+    .wrap1 .skill-nav .nav3{
+        background-position:-382px -597px;
+    }
+    .wrap1 .skill-nav .nav3.active{
+        background-position:-434px -597px;
+    }
+    .wrap1 .skill-nav .nav4{
+        background-position:-382px -654px;
+    }
+    .wrap1 .skill-nav .nav4.active{
+        background-position:-434px -654px;
+    }
+    .wrap1 .skill-nav .nav5{
+        background-position:-382px -711px;
+    }
+    .wrap1 .skill-nav .nav5.active{
+        background-position:-434px -711px;
+    }
+    .wrap1 .skill-nav .nav6{
+        background-position:-382px -768px;
+    }
+    .wrap1 .skill-nav .nav6.active{
+        background-position:-434px -768px;
+    }
+    .wrap1 .skill-nav .nav7{
+        background-position:-382px -825px;
+    }
+    .wrap1 .skill-nav .nav7.active{
+        background-position:-434px -825px;
+    }
+    .wrap1 .skill-nav .nav8{
+        background-position:-382px -882px;
+    }
+    .wrap1 .skill-nav .nav8.active{
+        background-position:-434px -882px;
+    }
+    .wrap1 .skill-nav .nav9{
+        background-position:-382px -939px;
+    }
+    .wrap1 .skill-nav .nav9.active{
+        background-position:-434px -939px;
+    }
+    .wrap1 .skill-nav .nav10{
+        background-position:-382px -994px;
+    }
+    .wrap1 .skill-nav .nav10.active{
+        background-position:-434px -994px;
+    }
+    .wrap1 .skill-nav .nav11{
+        background-position:-382px -1051px;
+    }
+    .wrap1 .skill-nav .nav11.active{
+        background-position:-434px -1051px;
+    }
+    .wrap1 .skill-desc i.i1{
+        background-position:-228px -1112px;
+    }
+    .wrap1 .skill-desc i.i2{
+        background-position:-228px -1168px;
+    }
+    .wrap1 .skill-desc i.i3{
+        background-position:-228px -1226px;
+    }
+    .wrap1 .skill-desc i.i4{
+        background-position:-228px -1282px;
+    }
+    .wrap1 .skill-desc i.i5{
+        background-position:-228px -1338px;
+    }
+    .wrap1 .skill-desc i.i6{
+        background-position:-228px -1394px;
+    }
+    .wrap1 .skill-desc i.i7{
+        background-position:-228px -1450px;
+    }
+    .wrap1 .skill-desc i.i8{
+        background-position:-228px -1506px;
+    }
+    .wrap1 .skill-desc i.i9{
+        background-position:-228px -1562px;
+    }
+    .wrap1 .skill-desc i.i10{
+        background-position:-228px -1618px;
+    }
+    .wrap1 .skill-desc i.i11{
+        background-position:-228px -1674px;
+    }
+    .wrap1 .circle .c-outer{
+        background:url("../images/circle-outer1.png") no-repeat top center;
+    }
+    .wrap1 .circle .c-inner{
+        background:url("../images/circle-inner1.png") no-repeat top center;
+    }
+    .wrap1 .circle .item{
+        border:2px solid #0055cc;
+        background:#000;
+    }
+    .wrap1 .circle .middle{
+        background-position: 0px 0px;
+    }
+    .wrap1 .circle .middle.ready{
+        background-position:-105px 0px;
+    }
+    .wrap1 .circle .middle.active{
+        background-position:-217px 0px;
+    }
+    .wrap1 .clicktips{
+        background-color:#0055cc;
+    }
+    .wrap1 .clicktips em{
+        border-top:6px solid #0055cc;
+    }
+    .wrap1 .skill-desc p.skill-title{
+        border-top:1px solid rgba(19,103,199,0.3);
+    }
+    .wrap1 .tips{
+        border:1px dashed #08274b;
+    }
+    .wrap1 .detail span{
+        color:#1571d9;
+    }
+    .wrap1 .circle .item.active span{
+        background-color:rgba(0,85,204,0.95);
+    }
+    .wrap1 .skill .skill-nav{
+        background:#152d58;
+    }
+
+
+
+
+
+    /*.wrap5{*/
+    /*background:url("../images/1-bg.jpg") no-repeat top center #1571d9;*/
+    /*height:960px;*/
+    /*}*/
+    /*.wrap5 .job{*/
+    /*background:url("../images/job1.png") no-repeat top center;*/
+    /*width:410px;*/
+    /*height:485px;*/
+    /*left:0px;*/
+    /*top:260px;*/
+    /*z-index:1;*/
+    /*}*/
+    /*.wrap5 .role{*/
+    /*background: url("../images/role1.png") no-repeat top center;*/
+    /*width: 1080px;*/
+    /*height: 940px;*/
+    /*right:-96px;*/
+    /*top:0px;*/
+    /*z-index:1;*/
+    /*}*/
+    /*.wrap5 .skill-wrap .job-title{*/
+    /*background-position: 0px 0px;*/
+    /*}*/
+    /*.wrap5 .skill-nav .nav1{*/
+    /*background-position:-2px -484px;*/
+    /*}*/
+    /*.wrap5 .skill-nav .nav1.active{*/
+    /*background-position:-48px -484px;*/
+    /*}*/
+    /*.wrap5 .skill-nav .nav2{*/
+    /*background-position:-2px -540px;*/
+    /*}*/
+    /*.wrap5 .skill-nav .nav2.active{*/
+    /*background-position:-48px -540px;*/
+    /*}*/
+    /*.wrap5 .skill-nav .nav3{*/
+    /*background-position:-2px -597px;*/
+    /*}*/
+    /*.wrap5 .skill-nav .nav3.active{*/
+    /*background-position:-48px -597px;*/
+    /*}*/
+    /*.wrap5 .skill-nav .nav4{*/
+    /*background-position:-2px -654px;*/
+    /*}*/
+    /*.wrap5 .skill-nav .nav4.active{*/
+    /*background-position:-48px -654px;*/
+    /*}*/
+    /*.wrap5 .skill-nav .nav5{*/
+    /*background-position:-2px -711px;*/
+    /*}*/
+    /*.wrap5 .skill-nav .nav5.active{*/
+    /*background-position:-48px -711px;*/
+    /*}*/
+    /*.wrap5 .skill-nav .nav6{*/
+    /*background-position:-2px -768px;*/
+    /*}*/
+    /*.wrap5 .skill-nav .nav6.active{*/
+    /*background-position:-48px -768px;*/
+    /*}*/
+    /*.wrap5 .skill-nav .nav7{*/
+    /*background-position:-2px -825px;*/
+    /*}*/
+    /*.wrap5 .skill-nav .nav7.active{*/
+    /*background-position:-48px -825px;*/
+    /*}*/
+    /*.wrap5 .skill-nav .nav8{*/
+    /*background-position:-2px -882px;*/
+    /*}*/
+    /*.wrap5 .skill-nav .nav8.active{*/
+    /*background-position:-48px -882px;*/
+    /*}*/
+    /*.wrap5 .skill-nav .nav9{*/
+    /*background-position:-2px -939px;*/
+    /*}*/
+    /*.wrap5 .skill-nav .nav9.active{*/
+    /*background-position:-48px -939px;*/
+    /*}*/
+    /*.wrap5 .skill-nav .nav10{*/
+    /*background-position:-2px -994px;*/
+    /*}*/
+    /*.wrap5 .skill-nav .nav10.active{*/
+    /*background-position:-48px -994px;*/
+    /*}*/
+    /*.wrap5 .skill-nav .nav11{*/
+    /*background-position:-2px -1051px;*/
+    /*}*/
+    /*.wrap5 .skill-nav .nav11.active{*/
+    /*background-position:-48px -1051px;*/
+    /*}*/
+    /*.wrap5 .skill-desc i.i1{*/
+    /*background-position:0px -1112px;*/
+    /*}*/
+    /*.wrap5 .skill-desc i.i2{*/
+    /*background-position:0px -1168px;*/
+    /*}*/
+    /*.wrap5 .skill-desc i.i3{*/
+    /*background-position:0px -1226px;*/
+    /*}*/
+    /*.wrap5 .skill-desc i.i4{*/
+    /*background-position:0px -1282px;*/
+    /*}*/
+    /*.wrap5 .skill-desc i.i5{*/
+    /*background-position:0px -1338px;*/
+    /*}*/
+    /*.wrap5 .skill-desc i.i6{*/
+    /*background-position:0px -1394px;*/
+    /*}*/
+    /*.wrap5 .skill-desc i.i7{*/
+    /*background-position:0px -1450px;*/
+    /*}*/
+    /*.wrap5 .skill-desc i.i8{*/
+    /*background-position:0px -1506px;*/
+    /*}*/
+    /*.wrap5 .skill-desc i.i9{*/
+    /*background-position:0px -1562px;*/
+    /*}*/
+    /*.wrap5 .skill-desc i.i10{*/
+    /*background-position:0px -1618px;*/
+    /*}*/
+    /*.wrap5 .skill-desc i.i11{*/
+    /*background-position:0px -1674px;*/
+    /*}*/
+    /*.wrap5 .circle .c-outer{*/
+    /*background:url("../images/circle-outer1.png") no-repeat top center;*/
+    /*}*/
+    /*.wrap5 .circle .c-inner{*/
+    /*background:url("../images/circle-inner1.png") no-repeat top center;*/
+    /*}*/
+    /*.wrap5 .circle .item{*/
+    /*border:2px solid #0055cc;*/
+    /*background:#000;*/
+    /*}*/
+    /*.wrap5 .circle .middle{*/
+    /*background-position: 0px 0px;*/
+    /*}*/
+    /*.wrap5 .circle .middle.ready{*/
+    /*background-position:-105px 0px;*/
+    /*}*/
+    /*.wrap5 .circle .middle.active{*/
+    /*background-position:-217px 0px;*/
+    /*}*/
+    /*.wrap5 .clicktips{*/
+    /*background-color:#0055cc;*/
+    /*}*/
+    /*.wrap5 .clicktips em{*/
+    /*border-top:6px solid #0055cc;*/
+    /*}*/
+    /*.wrap5 .skill-desc p.skill-title{*/
+    /*border-top:1px solid rgba(19,103,199,0.3);*/
+    /*}*/
+    /*.wrap5 .tips{*/
+    /*border:1px dashed #08274b;*/
+    /*}*/
+    /*.wrap5 .detail span{*/
+    /*color:#1571d9;*/
+    /*}*/
+    /*.wrap5 .circle .item.active span{*/
+    /*background-color:rgba(0,85,204,0.95);*/
+    /*}*/
+    /*.wrap5 .skill .skill-nav{*/
+    /*background:#152d58;*/
+    /*}*/
+    /*/!*wrap3====幻剑宗====*!/*/
+    /*.wrap3{*/
+    /*background:url("../images/2-bg.jpg") no-repeat top center #3f2d79;*/
+    /*height:960px;*/
+    /*}*/
+    /*.wrap3 .job{*/
+    /*background:url("../images/job2.png") no-repeat top center;*/
+    /*width:430px;*/
+    /*height:488px;*/
+    /*left:0px;*/
+    /*top:260px;*/
+    /*z-index:1;*/
+    /*}*/
+    /*.wrap3 .role{*/
+    /*background: url("../images/role2.png") no-repeat top center;*/
+    /*width: 1159px;*/
+    /*height: 1205px;*/
+    /*right:-20%;*/
+    /*top:0px;*/
+    /*z-index:1;*/
+    /*}*/
+    /*.wrap3 .skill-wrap .job-title{*/
+    /*background-position: 0px -92px;*/
+    /*}*/
+    /*.wrap3 .skill-nav .nav1{*/
+    /*background-position:-95px -484px;*/
+    /*}*/
+    /*.wrap3 .skill-nav .nav1.active{*/
+    /*background-position:-142px -484px;*/
+    /*}*/
+    /*.wrap3 .skill-nav .nav2{*/
+    /*background-position:-95px -540px;*/
+    /*}*/
+    /*.wrap3 .skill-nav .nav2.active{*/
+    /*background-position:-142px -540px;*/
+    /*}*/
+    /*.wrap3 .skill-nav .nav3{*/
+    /*background-position:-95px -597px;*/
+    /*}*/
+    /*.wrap3 .skill-nav .nav3.active{*/
+    /*background-position:-142px -597px;*/
+    /*}*/
+    /*.wrap3 .skill-nav .nav4{*/
+    /*background-position:-95px -654px;*/
+    /*}*/
+    /*.wrap3 .skill-nav .nav4.active{*/
+    /*background-position:-142px -654px;*/
+    /*}*/
+    /*.wrap3 .skill-nav .nav5{*/
+    /*background-position:-95px -711px;*/
+    /*}*/
+    /*.wrap3 .skill-nav .nav5.active{*/
+    /*background-position:-142px -711px;*/
+    /*}*/
+    /*.wrap3 .skill-nav .nav6{*/
+    /*background-position:-95px -768px;*/
+    /*}*/
+    /*.wrap3 .skill-nav .nav6.active{*/
+    /*background-position:-142px -768px;*/
+    /*}*/
+    /*.wrap3 .skill-nav .nav7{*/
+    /*background-position:-95px -825px;*/
+    /*}*/
+    /*.wrap3 .skill-nav .nav7.active{*/
+    /*background-position:-142px -825px;*/
+    /*}*/
+    /*.wrap3 .skill-nav .nav8{*/
+    /*background-position:-95px -882px;*/
+    /*}*/
+    /*.wrap3 .skill-nav .nav8.active{*/
+    /*background-position:-142px -882px;*/
+    /*}*/
+    /*.wrap3 .skill-nav .nav9{*/
+    /*background-position:-95px -939px;*/
+    /*}*/
+    /*.wrap3 .skill-nav .nav9.active{*/
+    /*background-position:-142px -939px;*/
+    /*}*/
+    /*.wrap3 .skill-nav .nav10{*/
+    /*background-position:-95px -994px;*/
+    /*}*/
+    /*.wrap3 .skill-nav .nav10.active{*/
+    /*background-position:-142px -994px;*/
+    /*}*/
+    /*.wrap3 .skill-nav .nav11{*/
+    /*background-position:-95px -1051px;*/
+    /*}*/
+    /*.wrap3 .skill-nav .nav11.active{*/
+    /*background-position:-142px -1051px;*/
+    /*}*/
+    /*.wrap3 .skill-desc i.i1{*/
+    /*background-position:-57px -1112px;*/
+    /*}*/
+    /*.wrap3 .skill-desc i.i2{*/
+    /*background-position:-57px -1168px;*/
+    /*}*/
+    /*.wrap3 .skill-desc i.i3{*/
+    /*background-position:-57px -1226px;*/
+    /*}*/
+    /*.wrap3 .skill-desc i.i4{*/
+    /*background-position:-57px -1282px;*/
+    /*}*/
+    /*.wrap3 .skill-desc i.i5{*/
+    /*background-position:-57px -1338px;*/
+    /*}*/
+    /*.wrap3 .skill-desc i.i6{*/
+    /*background-position:-57px -1394px;*/
+    /*}*/
+    /*.wrap3 .skill-desc i.i7{*/
+    /*background-position:-57px -1450px;*/
+    /*}*/
+    /*.wrap3 .skill-desc i.i8{*/
+    /*background-position:-57px -1506px;*/
+    /*}*/
+    /*.wrap3 .skill-desc i.i9{*/
+    /*background-position:-57px -1562px;*/
+    /*}*/
+    /*.wrap3 .skill-desc i.i10{*/
+    /*background-position:-57px -1618px;*/
+    /*}*/
+    /*.wrap3 .skill-desc i.i11{*/
+    /*background-position:-57px -1674px;*/
+    /*}*/
+    /*.wrap3 .circle .c-outer{*/
+    /*background:url("../images/circle-outer2.png") no-repeat top center;*/
+    /*}*/
+    /*.wrap3 .circle .c-inner{*/
+    /*background:url("../images/circle-inner2.png") no-repeat top center;*/
+    /*}*/
+    /*.wrap3 .circle .item{*/
+    /*border:2px solid #5443a8;*/
+    /*background:#000;*/
+    /*}*/
+    /*.wrap3 .circle .middle{*/
+    /*background-position: 0px -114px;*/
+    /*}*/
+    /*.wrap3 .circle .middle.ready{*/
+    /*background-position:-105px -114px;*/
+    /*}*/
+    /*.wrap3 .circle .middle.active{*/
+    /*background-position:-217px -114px;*/
+    /*}*/
+    /*.wrap3 .clicktips{*/
+    /*background-color:#5443a8;*/
+    /*}*/
+    /*.wrap3 .clicktips em{*/
+    /*border-top:6px solid #5443a8;*/
+    /*}*/
+    /*.wrap3 .skill-desc p.skill-title{*/
+    /*border-top:1px solid #1c1539;*/
+    /*}*/
+    /*.wrap3 .tips{*/
+    /*border:1px dashed #3f2d79;*/
+    /*}*/
+    /*.wrap3 .detail span{*/
+    /*color:#5544aa;*/
+    /*}*/
+    /*.wrap3 .circle .item.active span{*/
+    /*background-color:rgba(63,45,121,0.95);*/
+    /*}*/
+    /*.wrap3 .skill .skill-nav{*/
+    /*background:#3f2d79;*/
+    /*}*/
+    /*/!*wrap2====神荒岭====*!/*/
+    /*.wrap2{*/
+    /*background:url("../images/3-bg.jpg") no-repeat top center #aa2622;*/
+    /*height:960px;*/
+    /*}*/
+    /*.wrap2 .job{*/
+    /*background:url("../images/job3.png") no-repeat top center;*/
+    /*width:507px;*/
+    /*height:486px;*/
+    /*left:0px;*/
+    /*top:260px;*/
+    /*z-index:1;*/
+    /*}*/
+    /*.wrap2 .role{*/
+    /*background: url("../images/role3.png") no-repeat top center;*/
+    /*width: 815px;*/
+    /*height: 872px;*/
+    /*right:-10%;*/
+    /*top:63px;*/
+    /*z-index:1;*/
+    /*}*/
+    /*.wrap2 .skill-wrap .job-title{*/
+    /*background-position: 0px -183px;*/
+    /*}*/
+    /*.wrap2 .skill-nav .nav1{*/
+    /*background-position:-188px -484px;*/
+    /*}*/
+    /*.wrap2 .skill-nav .nav1.active{*/
+    /*background-position:-234px -484px;*/
+    /*}*/
+    /*.wrap2 .skill-nav .nav2{*/
+    /*background-position:-188px -540px;*/
+    /*}*/
+    /*.wrap2 .skill-nav .nav2.active{*/
+    /*background-position:-234px -540px;*/
+    /*}*/
+    /*.wrap2 .skill-nav .nav3{*/
+    /*background-position:-188px -597px;*/
+    /*}*/
+    /*.wrap2 .skill-nav .nav3.active{*/
+    /*background-position:-234px -597px;*/
+    /*}*/
+    /*.wrap2 .skill-nav .nav4{*/
+    /*background-position:-188px -654px;*/
+    /*}*/
+    /*.wrap2 .skill-nav .nav4.active{*/
+    /*background-position:-234px -654px;*/
+    /*}*/
+    /*.wrap2 .skill-nav .nav5{*/
+    /*background-position:-188px -711px;*/
+    /*}*/
+    /*.wrap2 .skill-nav .nav5.active{*/
+    /*background-position:-234px -711px;*/
+    /*}*/
+    /*.wrap2 .skill-nav .nav6{*/
+    /*background-position:-188px -768px;*/
+    /*}*/
+    /*.wrap2 .skill-nav .nav6.active{*/
+    /*background-position:-234px -768px;*/
+    /*}*/
+    /*.wrap2 .skill-nav .nav7{*/
+    /*background-position:-188px -825px;*/
+    /*}*/
+    /*.wrap2 .skill-nav .nav7.active{*/
+    /*background-position:-234px -825px;*/
+    /*}*/
+    /*.wrap2 .skill-nav .nav8{*/
+    /*background-position:-188px -882px;*/
+    /*}*/
+    /*.wrap2 .skill-nav .nav8.active{*/
+    /*background-position:-234px -882px;*/
+    /*}*/
+    /*.wrap2 .skill-nav .nav9{*/
+    /*background-position:-188px -939px;*/
+    /*}*/
+    /*.wrap2 .skill-nav .nav9.active{*/
+    /*background-position:-234px -939px;*/
+    /*}*/
+    /*.wrap2 .skill-nav .nav10{*/
+    /*background-position:-188px -994px;*/
+    /*}*/
+    /*.wrap2 .skill-nav .nav10.active{*/
+    /*background-position:-234px -994px;*/
+    /*}*/
+    /*.wrap2 .skill-nav .nav11{*/
+    /*background-position:-188px -1051px;*/
+    /*}*/
+    /*.wrap2 .skill-nav .nav11.active{*/
+    /*background-position:-234px -1051px;*/
+    /*}*/
+    /*.wrap2 .skill-desc i.i1{*/
+    /*background-position:-115px -1112px;*/
+    /*}*/
+    /*.wrap2 .skill-desc i.i2{*/
+    /*background-position:-115px -1168px;*/
+    /*}*/
+    /*.wrap2 .skill-desc i.i3{*/
+    /*background-position:-115px -1226px;*/
+    /*}*/
+    /*.wrap2 .skill-desc i.i4{*/
+    /*background-position:-115px -1282px;*/
+    /*}*/
+    /*.wrap2 .skill-desc i.i5{*/
+    /*background-position:-115px -1338px;*/
+    /*}*/
+    /*.wrap2 .skill-desc i.i6{*/
+    /*background-position:-115px -1394px;*/
+    /*}*/
+    /*.wrap2 .skill-desc i.i7{*/
+    /*background-position:-115px -1450px;*/
+    /*}*/
+    /*.wrap2 .skill-desc i.i8{*/
+    /*background-position:-115px -1506px;*/
+    /*}*/
+    /*.wrap2 .skill-desc i.i9{*/
+    /*background-position:-115px -1562px;*/
+    /*}*/
+    /*.wrap2 .skill-desc i.i10{*/
+    /*background-position:-115px -1618px;*/
+    /*}*/
+    /*.wrap2 .skill-desc i.i11{*/
+    /*background-position:-115px -1674px;*/
+    /*}*/
+    /*.wrap2 .circle .c-outer{*/
+    /*background:url("../images/circle-outer3.png") no-repeat top center;*/
+    /*}*/
+    /*.wrap2 .circle .c-inner{*/
+    /*background:url("../images/circle-inner3.png") no-repeat top center;*/
+    /*}*/
+    /*.wrap2 .circle .item{*/
+    /*border:2px solid #aa2622;*/
+    /*background:#000;*/
+    /*}*/
+    /*.wrap2 .circle .middle{*/
+    /*background-position: 0px -228px;*/
+    /*}*/
+    /*.wrap2 .circle .middle.ready{*/
+    /*background-position:-105px -228px;*/
+    /*}*/
+    /*.wrap2 .circle .middle.active{*/
+    /*background-position:-217px -228px;*/
+    /*}*/
+    /*.wrap2 .clicktips{*/
+    /*background-color:#8a1b17;*/
+    /*}*/
+    /*.wrap2 .clicktips em{*/
+    /*border-top:6px solid #8a1b17;*/
+    /*}*/
+    /*.wrap2 .skill-desc p.skill-title{*/
+    /*border-top:1px solid #5f1613;*/
+    /*}*/
+    /*.wrap2 .tips{*/
+    /*border:1px dashed #8a1b17;*/
+    /*}*/
+    /*.wrap2 .detail span{*/
+    /*color:#8a1b17;*/
+    /*}*/
+    /*.wrap2 .circle .item.active span{*/
+    /*background-color:rgba(170,38,34,0.95);*/
+    /*}*/
+    /*.wrap2 .skill .skill-nav{*/
+    /*background:#8a1b17;*/
+    /*}*/
+    /*wrap6====玄羽宫====*/
+    /*.wrap6{*/
+    /*background:url("../images/4-bg.jpg") no-repeat top center #005ed3;*/
+    /*height:960px;*/
+    /*}*/
+    /*.wrap6 .job{*/
+    /*background:url("../images/job4.png") no-repeat top center;*/
+    /*width:476px;*/
+    /*height:486px;*/
+    /*left:0px;*/
+    /*top:260px;*/
+    /*z-index:1;*/
+    /*}*/
+    /*.wrap6 .role{*/
+    /*background: url("../images/role4.png") no-repeat top center;*/
+    /*width: 921px;*/
+    /*height: 1462px;*/
+    /*right:-6%;*/
+    /*top:-90px;*/
+    /*z-index:1;*/
+    /*}*/
+    /*.wrap6 .skill-wrap .job-title{*/
+    /*background-position: 0px -274px;*/
+    /*}*/
+    /*.wrap6 .skill-nav .nav1{*/
+    /*background-position:-282px -484px;*/
+    /*}*/
+    /*.wrap6 .skill-nav .nav1.active{*/
+    /*background-position:-330px -484px;*/
+    /*}*/
+    /*.wrap6 .skill-nav .nav2{*/
+    /*background-position:-282px -540px;*/
+    /*}*/
+    /*.wrap6 .skill-nav .nav2.active{*/
+    /*background-position:-330px -540px;*/
+    /*}*/
+    /*.wrap6 .skill-nav .nav3{*/
+    /*background-position:-282px -597px;*/
+    /*}*/
+    /*.wrap6 .skill-nav .nav3.active{*/
+    /*background-position:-330px -597px;*/
+    /*}*/
+    /*.wrap6 .skill-nav .nav4{*/
+    /*background-position:-282px -654px;*/
+    /*}*/
+    /*.wrap6 .skill-nav .nav4.active{*/
+    /*background-position:-330px -654px;*/
+    /*}*/
+    /*.wrap6 .skill-nav .nav5{*/
+    /*background-position:-282px -711px;*/
+    /*}*/
+    /*.wrap6 .skill-nav .nav5.active{*/
+    /*background-position:-330px -711px;*/
+    /*}*/
+    /*.wrap6 .skill-nav .nav6{*/
+    /*background-position:-282px -768px;*/
+    /*}*/
+    /*.wrap6 .skill-nav .nav6.active{*/
+    /*background-position:-330px -768px;*/
+    /*}*/
+    /*.wrap6 .skill-nav .nav7{*/
+    /*background-position:-282px -825px;*/
+    /*}*/
+    /*.wrap6 .skill-nav .nav7.active{*/
+    /*background-position:-330px -825px;*/
+    /*}*/
+    /*.wrap6 .skill-nav .nav8{*/
+    /*background-position:-282px -882px;*/
+    /*}*/
+    /*.wrap6 .skill-nav .nav8.active{*/
+    /*background-position:-330px -882px;*/
+    /*}*/
+    /*.wrap6 .skill-nav .nav9{*/
+    /*background-position:-282px -939px;*/
+    /*}*/
+    /*.wrap6 .skill-nav .nav9.active{*/
+    /*background-position:-330px -939px;*/
+    /*}*/
+    /*.wrap6 .skill-nav .nav10{*/
+    /*background-position:-282px -994px;*/
+    /*}*/
+    /*.wrap6 .skill-nav .nav10.active{*/
+    /*background-position:-330px -994px;*/
+    /*}*/
+    /*.wrap6 .skill-nav .nav11{*/
+    /*background-position:-282px -1051px;*/
+    /*}*/
+    /*.wrap6 .skill-nav .nav11.active{*/
+    /*background-position:-330px -1051px;*/
+    /*}*/
+    /*.wrap6 .skill-desc i.i1{*/
+    /*background-position:-171px -1112px;*/
+    /*}*/
+    /*.wrap6 .skill-desc i.i2{*/
+    /*background-position:-171px -1168px;*/
+    /*}*/
+    /*.wrap6 .skill-desc i.i3{*/
+    /*background-position:-171px -1226px;*/
+    /*}*/
+    /*.wrap6 .skill-desc i.i4{*/
+    /*background-position:-171px -1282px;*/
+    /*}*/
+    /*.wrap6 .skill-desc i.i5{*/
+    /*background-position:-171px -1338px;*/
+    /*}*/
+    /*.wrap6 .skill-desc i.i6{*/
+    /*background-position:-171px -1394px;*/
+    /*}*/
+    /*.wrap6 .skill-desc i.i7{*/
+    /*background-position:-171px -1450px;*/
+    /*}*/
+    /*.wrap6 .skill-desc i.i8{*/
+    /*background-position:-171px -1506px;*/
+    /*}*/
+    /*.wrap6 .skill-desc i.i9{*/
+    /*background-position:-171px -1562px;*/
+    /*}*/
+    /*.wrap6 .skill-desc i.i10{*/
+    /*background-position:-171px -1618px;*/
+    /*}*/
+    /*.wrap6 .skill-desc i.i11{*/
+    /*background-position:-171px -1674px;*/
+    /*}*/
+    /*.wrap6 .circle .c-outer{*/
+    /*background:url("../images/circle-outer4.png") no-repeat top center;*/
+    /*}*/
+    /*.wrap6 .circle .c-inner{*/
+    /*background:url("../images/circle-inner4.png") no-repeat top center;*/
+    /*}*/
+    /*.wrap6 .circle .item{*/
+    /*border:2px solid #0055cc;*/
+    /*background:#000;*/
+    /*}*/
+    /*.wrap6 .circle .middle{*/
+    /*background-position: 0px -342px;*/
+    /*}*/
+    /*.wrap6 .circle .middle.ready{*/
+    /*background-position:-105px -342px;*/
+    /*}*/
+    /*.wrap6 .circle .middle.active{*/
+    /*background-position:-217px -342px;*/
+    /*}*/
+    /*.wrap6 .clicktips{*/
+    /*background-color:#0055dd;*/
+    /*}*/
+    /*.wrap6 .clicktips em{*/
+    /*border-top:6px solid #0055dd;*/
+    /*}*/
+    /*.wrap6 .skill-desc p.skill-title{*/
+    /*border-top:1px solid #031f4d;*/
+    /*}*/
+    /*.wrap6 .tips{*/
+    /*border:1px dashed #0055dd;*/
+    /*}*/
+    /*.wrap6 .detail span{*/
+    /*color:#0055dd;*/
+    /*}*/
+    /*.wrap6 .circle .item.active span{*/
+    /*background-color:rgba(0,85,204,0.95);*/
+    /*}*/
+    /*.wrap6 .skill .skill-nav{*/
+    /*background:#0055dd;*/
+    /*}*/
+    /*wrap====破军府====*/
+
+
+    .wrap .skill-wrap .job-title{
+    background-position: 0px -365px;
+    }
+    .wrap .skill-nav .nav1{
+    background-position:-382px -484px;
+    }
+    .wrap .skill-nav .nav1.active{
+    background-position:-434px -484px;
+    }
+    .wrap .skill-nav .nav2{
+    background-position:-382px -540px;
+    }
+    .wrap .skill-nav .nav2.active{
+    background-position:-434px -540px;
+    }
+    .wrap .skill-nav .nav3{
+    background-position:-382px -597px;
+    }
+    .wrap .skill-nav .nav3.active{
+    background-position:-434px -597px;
+    }
+    .wrap .skill-nav .nav4{
+    background-position:-382px -654px;
+    }
+    .wrap .skill-nav .nav4.active{
+    background-position:-434px -654px;
+    }
+    .wrap .skill-nav .nav5{
+    background-position:-382px -711px;
+    }
+    .wrap .skill-nav .nav5.active{
+    background-position:-434px -711px;
+    }
+    .wrap .skill-nav .nav6{
+    background-position:-382px -768px;
+    }
+    .wrap .skill-nav .nav6.active{
+    background-position:-434px -768px;
+    }
+    .wrap .skill-nav .nav7{
+    background-position:-382px -825px;
+    }
+    .wrap .skill-nav .nav7.active{
+    background-position:-434px -825px;
+    }
+    .wrap .skill-nav .nav8{
+    background-position:-382px -882px;
+    }
+    .wrap .skill-nav .nav8.active{
+    background-position:-434px -882px;
+    }
+    .wrap .skill-nav .nav9{
+    background-position:-382px -939px;
+    }
+    .wrap .skill-nav .nav9.active{
+    background-position:-434px -939px;
+    }
+    .wrap .skill-nav .nav10{
+    background-position:-382px -994px;
+    }
+    .wrap .skill-nav .nav10.active{
+    background-position:-434px -994px;
+    }
+    .wrap .skill-nav .nav11{
+    background-position:-382px -1051px;
+    }
+    .wrap .skill-nav .nav11.active{
+    background-position:-434px -1051px;
+    }
+    .wrap .skill-desc i.i1{
+    background-position:-228px -1112px;
+    }
+    .wrap .skill-desc i.i2{
+    background-position:-228px -1168px;
+    }
+    .wrap .skill-desc i.i3{
+    background-position:-228px -1226px;
+    }
+    .wrap .skill-desc i.i4{
+    background-position:-228px -1282px;
+    }
+    .wrap .skill-desc i.i5{
+    background-position:-228px -1338px;
+    }
+    .wrap .skill-desc i.i6{
+    background-position:-228px -1394px;
+    }
+    .wrap .skill-desc i.i7{
+    background-position:-228px -1450px;
+    }
+    .wrap .skill-desc i.i8{
+    background-position:-228px -1506px;
+    }
+    .wrap .skill-desc i.i9{
+    background-position:-228px -1562px;
+    }
+    .wrap .skill-desc i.i10{
+    background-position:-228px -1618px;
+    }
+    .wrap .skill-desc i.i11{
+    background-position:-228px -1674px;
+    }
+    .wrap .circle .c-outer{
+    background:url("../images/circle-outer1.png") no-repeat top center;
+    }
+    .wrap .circle .c-inner{
+    background:url("../images/circle-inner1.png") no-repeat top center;
+    }
+    .wrap .circle .item{
+    border:2px solid #0055cc;
+    background:#000;
+    }
+    .wrap .circle .middle{
+    background-position: 0px 0px;
+    }
+    .wrap .circle .middle.ready{
+    background-position:-105px 0px;
+    }
+    .wrap .circle .middle.active{
+    background-position:-217px 0px;
+    }
+    .wrap .clicktips{
+    background-color:#0055cc;
+    }
+    .wrap .clicktips em{
+    border-top:6px solid #0055cc;
+    }
+    .wrap .skill-desc p.skill-title{
+    border-top:1px solid rgba(19,103,199,0.3);
+    }
+    .wrap .tips{
+    border:1px dashed #08274b;
+    }
+    .wrap .detail span{
+    color:#1571d9;
+    }
+    .wrap .circle .item.active span{
+    background-color:rgba(0,85,204,0.95);
+    }
+    .wrap .skill .skill-nav{
+    background:#152d58;
+    }
+    /*/!*wrap8====妙音谷====*!/*/
+    /*.wrap8{*/
+    /*background:url("../images/6-bg.jpg") no-repeat top center #1eaf73;*/
+    /*height:960px;*/
+    /*}*/
+    /*.wrap8 .job{*/
+    /*background:url("../images/job6.png") no-repeat top center;*/
+    /*width:456px;*/
+    /*height:511px;*/
+    /*left:0px;*/
+    /*top:260px;*/
+    /*z-index:1;*/
+    /*}*/
+
+    /*.wrap8 .skill-wrap .job-title{*/
+    /*background-position: 0px -456px;*/
+    /*}*/
+    /*.wrap8 .skill-nav .nav1{*/
+    /*background-position:-486px -484px;*/
+    /*}*/
+    /*.wrap8 .skill-nav .nav1.active{*/
+    /*background-position:-538px -484px;*/
+    /*}*/
+    /*.wrap8 .skill-nav .nav2{*/
+    /*background-position:-486px -540px;*/
+    /*}*/
+    /*.wrap8 .skill-nav .nav2.active{*/
+    /*background-position:-538px -540px;*/
+    /*}*/
+    /*.wrap8 .skill-nav .nav3{*/
+    /*background-position:-486px -597px;*/
+    /*}*/
+    /*.wrap8 .skill-nav .nav3.active{*/
+    /*background-position:-538px -597px;*/
+    /*}*/
+    /*.wrap8 .skill-nav .nav4{*/
+    /*background-position:-486px -654px;*/
+    /*}*/
+    /*.wrap8 .skill-nav .nav4.active{*/
+    /*background-position:-538px -654px;*/
+    /*}*/
+    /*.wrap8 .skill-nav .nav5{*/
+    /*background-position:-486px -711px;*/
+    /*}*/
+    /*.wrap8 .skill-nav .nav5.active{*/
+    /*background-position:-538px -711px;*/
+    /*}*/
+    /*.wrap8 .skill-nav .nav6{*/
+    /*background-position:-486px -768px;*/
+    /*}*/
+    /*.wrap8 .skill-nav .nav6.active{*/
+    /*background-position:-538px -768px;*/
+    /*}*/
+    /*.wrap8 .skill-nav .nav7{*/
+    /*background-position:-486px -825px;*/
+    /*}*/
+    /*.wrap8 .skill-nav .nav7.active{*/
+    /*background-position:-538px -825px;*/
+    /*}*/
+    /*.wrap8 .skill-nav .nav8{*/
+    /*background-position:-486px -882px;*/
+    /*}*/
+    /*.wrap8 .skill-nav .nav8.active{*/
+    /*background-position:-538px -882px;*/
+    /*}*/
+    /*.wrap8 .skill-nav .nav9{*/
+    /*background-position:-486px -939px;*/
+    /*}*/
+    /*.wrap8 .skill-nav .nav9.active{*/
+    /*background-position:-538px -939px;*/
+    /*}*/
+    /*.wrap8 .skill-nav .nav10{*/
+    /*background-position:-486px -994px;*/
+    /*}*/
+    /*.wrap8 .skill-nav .nav10.active{*/
+    /*background-position:-538px -994px;*/
+    /*}*/
+    /*.wrap8 .skill-nav .nav11{*/
+    /*background-position:-486px -1051px;*/
+    /*}*/
+    /*.wrap8 .skill-nav .nav11.active{*/
+    /*background-position:-538px -1051px;*/
+    /*}*/
+    /*.wrap8 .skill-desc i.i1{*/
+    /*background-position:-282px -1112px;*/
+    /*}*/
+    /*.wrap8 .skill-desc i.i2{*/
+    /*background-position:-282px -1168px;*/
+    /*}*/
+    /*.wrap8 .skill-desc i.i3{*/
+    /*background-position:-282px -1226px;*/
+    /*}*/
+    /*.wrap8 .skill-desc i.i4{*/
+    /*background-position:-282px -1282px;*/
+    /*}*/
+    /*.wrap8 .skill-desc i.i5{*/
+    /*background-position:-282px -1338px;*/
+    /*}*/
+    /*.wrap8 .skill-desc i.i6{*/
+    /*background-position:-282px -1394px;*/
+    /*}*/
+    /*.wrap8 .skill-desc i.i7{*/
+    /*background-position:-282px -1450px;*/
+    /*}*/
+    /*.wrap8 .skill-desc i.i8{*/
+    /*background-position:-282px -1506px;*/
+    /*}*/
+    /*.wrap8 .skill-desc i.i9{*/
+    /*background-position:-282px -1562px;*/
+    /*}*/
+    /*.wrap8 .skill-desc i.i10{*/
+    /*background-position:-282px -1618px;*/
+    /*}*/
+    /*.wrap8 .skill-desc i.i11{*/
+    /*background-position:-282px -1674px;*/
+    /*}*/
+    /*.wrap8 .circle .c-outer{*/
+    /*background:url("../images/circle-outer6.png") no-repeat top center;*/
+    /*}*/
+    /*.wrap8 .circle .c-inner{*/
+    /*background:url("../images/circle-inner6.png") no-repeat top center;*/
+    /*}*/
+    /*.wrap8 .circle .item{*/
+    /*border:2px solid #11aa77;*/
+    /*background:#000;*/
+    /*}*/
+    /*.wrap8 .circle .middle{*/
+    /*background-position: 0px -456px;*/
+    /*}*/
+    /*.wrap8 .circle .middle.ready{*/
+    /*background-position:-105px -456px;*/
+    /*}*/
+    /*.wrap8 .circle .middle.active{*/
+    /*background-position:-217px -456px;*/
+    /*}*/
+    /*.wrap8 .clicktips{*/
+    /*background-color:#11aa77;*/
+    /*}*/
+    /*.wrap8 .clicktips em{*/
+    /*border-top:6px solid #11aa77;*/
+    /*}*/
+    /*.wrap8 .skill-desc p.skill-title{*/
+    /*border-top:1px solid rgba(17,170,119,0.3);*/
+    /*}*/
+    /*.wrap8 .tips{*/
+    /*border:1px dashed #11aa77;*/
+    /*}*/
+    /*.wrap8 .detail span{*/
+    /*color:#11aa77;*/
+    /*}*/
+    /*.wrap8 .circle .item.active span{*/
+    /*background-color:rgba(17,170,119,0.95);*/
+    /*}*/
+    /*.wrap8 .skill .skill-nav{*/
+    /*background:#11aa77;*/
+    /*}*/
+    /*/!*wrap7====天龙居====*!/*/
+    /*.wrap7{*/
+    /*background:url("../images/7-bg.jpg") no-repeat top center #3f5874;*/
+    /*height:960px;*/
+    /*}*/
+    /*.wrap7 .job{*/
+    /*background:url("../images/job7.png") no-repeat top center;*/
+    /*width:432px;*/
+    /*height:462px;*/
+    /*left:0;*/
+    /*top:260px;*/
+    /*z-index:1;*/
+    /*}*/
+
+    /*.wrap7 .skill-wrap .job-title{*/
+    /*background-position: 0px -547px;*/
+    /*}*/
+    /*.wrap7 .skill-nav .nav1{*/
+    /*background-position:-590px -484px;*/
+    /*}*/
+    /*.wrap7 .skill-nav .nav1.active{*/
+    /*background-position:-642px -484px;*/
+    /*}*/
+    /*.wrap7 .skill-nav .nav2{*/
+    /*background-position:-590px -540px;*/
+    /*}*/
+    /*.wrap7 .skill-nav .nav2.active{*/
+    /*background-position:-642px -540px;*/
+    /*}*/
+    /*.wrap7 .skill-nav .nav3{*/
+    /*background-position:-590px -597px;*/
+    /*}*/
+    /*.wrap7 .skill-nav .nav3.active{*/
+    /*background-position:-642px -597px;*/
+    /*}*/
+    /*.wrap7 .skill-nav .nav4{*/
+    /*background-position:-590px -654px;*/
+    /*}*/
+    /*.wrap7 .skill-nav .nav4.active{*/
+    /*background-position:-642px -654px;*/
+    /*}*/
+    /*.wrap7 .skill-nav .nav5{*/
+    /*background-position:-590px -711px;*/
+    /*}*/
+    /*.wrap7 .skill-nav .nav5.active{*/
+    /*background-position:-642px -711px;*/
+    /*}*/
+    /*.wrap7 .skill-nav .nav6{*/
+    /*background-position:-590px -768px;*/
+    /*}*/
+    /*.wrap7 .skill-nav .nav6.active{*/
+    /*background-position:-642px -768px;*/
+    /*}*/
+    /*.wrap7 .skill-nav .nav7{*/
+    /*background-position:-590px -825px;*/
+    /*}*/
+    /*.wrap7 .skill-nav .nav7.active{*/
+    /*background-position:-642px -825px;*/
+    /*}*/
+    /*.wrap7 .skill-nav .nav8{*/
+    /*background-position:-590px -882px;*/
+    /*}*/
+    /*.wrap7 .skill-nav .nav8.active{*/
+    /*background-position:-642px -882px;*/
+    /*}*/
+    /*.wrap7 .skill-nav .nav9{*/
+    /*background-position:-590px -939px;*/
+    /*}*/
+    /*.wrap7 .skill-nav .nav9.active{*/
+    /*background-position:-642px -939px;*/
+    /*}*/
+    /*.wrap7 .skill-nav .nav10{*/
+    /*background-position:-590px -994px;*/
+    /*}*/
+    /*.wrap7 .skill-nav .nav10.active{*/
+    /*background-position:-642px -994px;*/
+    /*}*/
+    /*.wrap7 .skill-nav .nav11{*/
+    /*background-position:-590px -1051px;*/
+    /*}*/
+    /*.wrap7 .skill-nav .nav11.active{*/
+    /*background-position:-642px -1051px;*/
+    /*}*/
+    /*.wrap7 .skill-desc i.i1{*/
+    /*background-position:-338px -1112px;*/
+    /*}*/
+    /*.wrap7 .skill-desc i.i2{*/
+    /*background-position:-338px -1168px;*/
+    /*}*/
+    /*.wrap7 .skill-desc i.i3{*/
+    /*background-position:-338px -1226px;*/
+    /*}*/
+    /*.wrap7 .skill-desc i.i4{*/
+    /*background-position:-338px -1282px;*/
+    /*}*/
+    /*.wrap7 .skill-desc i.i5{*/
+    /*background-position:-338px -1338px;*/
+    /*}*/
+    /*.wrap7 .skill-desc i.i6{*/
+    /*background-position:-338px -1394px;*/
+    /*}*/
+    /*.wrap7 .skill-desc i.i7{*/
+    /*background-position:-338px -1450px;*/
+    /*}*/
+    /*.wrap7 .skill-desc i.i8{*/
+    /*background-position:-338px -1506px;*/
+    /*}*/
+    /*.wrap7 .skill-desc i.i9{*/
+    /*background-position:-338px -1562px;*/
+    /*}*/
+    /*.wrap7 .skill-desc i.i10{*/
+    /*background-position:-338px -1618px;*/
+    /*}*/
+    /*.wrap7 .skill-desc i.i11{*/
+    /*background-position:-338px -1674px;*/
+    /*}*/
+    /*.wrap7 .circle .c-outer{*/
+    /*background:url("../images/circle-outer7.png") no-repeat top center;*/
+    /*}*/
+    /*.wrap7 .circle .c-inner{*/
+    /*background:url("../images/circle-inner7.png") no-repeat top center;*/
+    /*}*/
+    /*.wrap7 .circle .item{*/
+    /*border:2px solid #334466;*/
+    /*background:#000;*/
+    /*}*/
+    /*.wrap7 .circle .middle{*/
+    /*background-position: 0px -570px;*/
+    /*}*/
+    /*.wrap7 .circle .middle.ready{*/
+    /*background-position:-105px -570px;*/
+    /*}*/
+    /*.wrap7 .circle .middle.active{*/
+    /*background-position:-217px -570px;*/
+    /*}*/
+    /*.wrap7 .clicktips{*/
+    /*background-color:#334466;*/
+    /*}*/
+    /*.wrap7 .clicktips em{*/
+    /*border-top:6px solid #334466;*/
+    /*}*/
+    /*.wrap7 .skill-desc p.skill-title{*/
+    /*border-top:1px solid rgba(51,85,136,0.3);*/
+    /*}*/
+    /*.wrap7 .tips{*/
+    /*border:1px dashed #334466;*/
+    /*}*/
+    /*.wrap7 .detail span{*/
+    /*color:#334466;*/
+    /*}*/
+    /*.wrap7 .circle .item.active span{*/
+    /*background-color:rgba(51,85,136,0.95);*/
+    /*}*/
+    /*.wrap7 .skill .skill-nav{*/
+    /*background:#334466;*/
+    /*}*/
+    /*/!*wrap4====星罗天====*!/*/
+    /*.wrap4{*/
+    /*background:url("../images/8-bg.jpg") no-repeat top center #008b9d;*/
+    /*height:960px;*/
+    /*}*/
+    /*.wrap4 .job{*/
+    /*background:url("../images/job8.png") no-repeat top center;*/
+    /*width:435px;*/
+    /*height:487px;*/
+    /*left:0px;*/
+    /*top:260px;*/
+    /*z-index:1;*/
+    /*}*/
+    /*.wrap4 .role{*/
+    /*background: url("../images/role8.png") no-repeat top center;*/
+    /*width: 1061px;*/
+    /*height: 1132px;*/
+    /*right:-24%;*/
+    /*top:0;*/
+    /*z-index:1;*/
+    /*}*/
+    /*.wrap4 .skill-wrap .job-title{*/
+    /*background-position: 0px -639px;*/
+    /*}*/
+    /*.wrap4 .skill-nav .nav1{*/
+    /*background-position:-694px -484px;*/
+    /*}*/
+    /*.wrap4 .skill-nav .nav1.active{*/
+    /*background-position:-746px -484px;*/
+    /*}*/
+    /*.wrap4 .skill-nav .nav2{*/
+    /*background-position:-694px -540px;*/
+    /*}*/
+    /*.wrap4 .skill-nav .nav2.active{*/
+    /*background-position:-746px -540px;*/
+    /*}*/
+    /*.wrap4 .skill-nav .nav3{*/
+    /*background-position:-694px -597px;*/
+    /*}*/
+    /*.wrap4 .skill-nav .nav3.active{*/
+    /*background-position:-746px -597px;*/
+    /*}*/
+    /*.wrap4 .skill-nav .nav4{*/
+    /*background-position:-694px -654px;*/
+    /*}*/
+    /*.wrap4 .skill-nav .nav4.active{*/
+    /*background-position:-746px -654px;*/
+    /*}*/
+    /*.wrap4 .skill-nav .nav5{*/
+    /*background-position:-694px -711px;*/
+    /*}*/
+    /*.wrap4 .skill-nav .nav5.active{*/
+    /*background-position:-746px -711px;*/
+    /*}*/
+    /*.wrap4 .skill-nav .nav6{*/
+    /*background-position:-694px -768px;*/
+    /*}*/
+    /*.wrap4 .skill-nav .nav6.active{*/
+    /*background-position:-746px -768px;*/
+    /*}*/
+    /*.wrap4 .skill-nav .nav7{*/
+    /*background-position:-694px -825px;*/
+    /*}*/
+    /*.wrap4 .skill-nav .nav7.active{*/
+    /*background-position:-746px -825px;*/
+    /*}*/
+    /*.wrap4 .skill-nav .nav8{*/
+    /*background-position:-694px -882px;*/
+    /*}*/
+    /*.wrap4 .skill-nav .nav8.active{*/
+    /*background-position:-746px -882px;*/
+    /*}*/
+    /*.wrap4 .skill-nav .nav9{*/
+    /*background-position:-694px -939px;*/
+    /*}*/
+    /*.wrap4 .skill-nav .nav9.active{*/
+    /*background-position:-746px -939px;*/
+    /*}*/
+    /*.wrap4 .skill-nav .nav10{*/
+    /*background-position:-694px -994px;*/
+    /*}*/
+    /*.wrap4 .skill-nav .nav10.active{*/
+    /*background-position:-746px -994px;*/
+    /*}*/
+    /*.wrap4 .skill-nav .nav11{*/
+    /*background-position:-694px -1051px;*/
+    /*}*/
+    /*.wrap4 .skill-nav .nav11.active{*/
+    /*background-position:-746px -1051px;*/
+    /*}*/
+    /*.wrap4 .skill-desc i.i1{*/
+    /*background-position:-288px -1112px;*/
+    /*}*/
+    /*.wrap4 .skill-desc i.i2{*/
+    /*background-position:-394px -1168px;*/
+    /*}*/
+    /*.wrap4 .skill-desc i.i3{*/
+    /*background-position:-394px -1226px;*/
+    /*}*/
+    /*.wrap4 .skill-desc i.i4{*/
+    /*background-position:-394px -1282px;*/
+    /*}*/
+    /*.wrap4 .skill-desc i.i5{*/
+    /*background-position:-394px -1338px;*/
+    /*}*/
+    /*.wrap4 .skill-desc i.i6{*/
+    /*background-position:-394px -1394px;*/
+    /*}*/
+    /*.wrap4 .skill-desc i.i7{*/
+    /*background-position:-394px -1450px;*/
+    /*}*/
+    /*.wrap4 .skill-desc i.i8{*/
+    /*background-position:-394px -1506px;*/
+    /*}*/
+    /*.wrap4 .skill-desc i.i9{*/
+    /*background-position:-394px -1562px;*/
+    /*}*/
+    /*.wrap4 .skill-desc i.i10{*/
+    /*background-position:-394px -1618px;*/
+    /*}*/
+    /*.wrap4 .skill-desc i.i11{*/
+    /*background-position:-394px -1674px;*/
+    /*}*/
+    /*.wrap4 .circle .c-outer{*/
+    /*background:url("../images/circle-outer8.png") no-repeat top center;*/
+    /*}*/
+    /*.wrap4 .circle .c-inner{*/
+    /*background:url("../images/circle-inner8.png") no-repeat top center;*/
+    /*}*/
+    /*.wrap4 .circle .item{*/
+    /*border:2px solid #004455;*/
+    /*background:#000;*/
+    /*}*/
+    /*.wrap4 .circle .middle{*/
+    /*background-position: 0px -684px;*/
+    /*}*/
+    /*.wrap4 .circle .middle.ready{*/
+    /*background-position:-105px -684px;*/
+    /*}*/
+    /*.wrap4 .circle .middle.active{*/
+    /*background-position:-217px -684px;*/
+    /*}*/
+    /*.wrap4 .clicktips{*/
+    /*background-color:#0088aa;*/
+    /*}*/
+    /*.wrap4 .clicktips em{*/
+    /*border-top:6px solid #0088aa;*/
+    /*}*/
+    /*.wrap4 .skill-desc p.skill-title{*/
+    /*border-top:1px solid rgba(0,68,85,0.3);*/
+    /*}*/
+    /*.wrap4 .tips{*/
+    /*border:1px dashed #004455;*/
+    /*}*/
+    /*.wrap4 .detail span{*/
+    /*color:#0088aa;*/
+    /*}*/
+    /*.wrap4 .circle .item.active span{*/
+    /*background-color:rgba(0,68,85,0.95);*/
+    /*}*/
+    /*.wrap4 .skill .skill-nav{*/
+    /*background:#004455;*/
+    /*}*/
+    /*中间内容部分完成*/

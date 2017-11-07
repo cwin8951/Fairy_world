@@ -1,0 +1,414 @@
+
+
+/*版心*/
+.w{
+    width: 1200px;
+    margin:0 auto;
+}
+.header{
+    margin:0 auto;
+    width: 100%;
+    background: url("../images/bg.jpg") no-repeat center top;
+    overflow: hidden;
+}
+.nav ul{
+    position: relative;
+}
+.nav ul li a:hover{
+    color: #ffffff;
+}
+.nav .shiyan{
+    /*margin: auto;*/
+    display: block;
+    position: relative;
+    top: -95px;
+    left: 293px;
+    width: 1000px;
+    height: 70px;
+    /*margin: 50px 0 0 336px;*/
+    border-bottom: 1px solid #96a1b1;
+}
+.nav span{
+    position: absolute;
+    left:0;
+    top: 20px;
+    width: 120px;
+    height: 50px;
+    border-radius:5px ;
+    background:  #97794B;
+}
+
+.logo{
+    margin-top: 30px;
+    margin-left: 5px;
+    display: inline-block;
+}
+.logdot {
+    position: relative;
+    top: 95px;
+    left: 10px;
+
+}
+.nav ul li{
+    float: left;
+    font-size: 16px;
+    color: #000;
+    margin-top: 20px;
+    width: 120px;
+    line-height: 50px;
+    text-align: center;
+}
+.sky {
+    height: 680px;
+    /*border: 1px solid #000000;*/
+}
+/*初始化  reset*/
+
+.rotate{
+    position: relative;
+    left: 30px;
+    top: -200px;
+}
+.wrap{
+    width:1200px;
+    margin:100px auto;
+}
+.slide {
+    height:500px;
+    position: relative;
+}
+.slide li{
+    position: absolute;
+    left:200px;
+    top:0;
+}
+.slide li img{
+    width:100%;
+}
+
+.prev,.next{
+    /*width:76px;*/
+    /*height:112px;*/
+    position: absolute;
+    top:50%;
+    margin-top:-56px;
+    font-size: 70px;
+    color: rgb(102, 102, 102);
+    z-index: 99;
+}
+.next{
+    /*position: relative;*/
+    /*left: ;*/
+    right:0;
+
+}
+
+
+/*主体*/
+.main{
+    /*height: 700px;*/
+}
+/*左边游戏下载栏*/
+.sidebar{
+    float: left;
+    /*position: absolute;*/
+    display:inline-block;
+    height: 500px;
+    margin-top:0 ;
+    /*background-color: #333333;*/
+    width: 25%;
+
+
+}
+/*游戏下载按钮*/
+.sidebar .leftBtn {
+    display: block;
+    width: 100%;
+    height: 150px;
+    padding: 0;
+    background: url("../images/orderBtn.png") no-repeat;
+
+}
+.sidebar .leftBtn:hover{
+    background-position: 0 -151px;
+
+}
+.sidebar .leftBtnes {
+    width: 100%;
+    height: 170px;
+    background: url("../images/btns_bg.jpg") no-repeat;
+}
+.sidebar .leftBtnes li {
+    float: left;
+    width: 46%;
+    height: 50%;
+    text-align: center;
+    line-height: 85px;
+}
+
+.sidebar .leftBtnes a {
+    color: #dcdfe2;
+    font-size: 16px;
+
+}
+
+.sidebar .leftBtnes a:hover {
+    color: #fadd9d;
+
+}
+.sidebar .yxjwt img{
+    margin-top: -6px;
+}
+.sidebar .qrcode a img{
+    width: 114px;
+}
+.sidebar .qrcode p{
+    position: relative;
+    top: 15px ;
+    left: 25px;
+    font-size: 25px;
+    color: #435365;
+    display: inline-block;
+
+}
+.sidebar .qrcode span{
+    position: relative;
+    display: inline-block;
+    left: 150px;
+    top: -46px;
+
+    color: #8899aa;
+}
+.sidebar .links{
+    background: #ffffff;
+
+    height: 135px;
+    width: 93%;
+
+}
+.sidebar .links tr{
+    height: 135px;
+}
+.sidebar .links tr td{
+    width: 50%;
+    border: 1px solid #eee;
+}
+.sidebar .links tr td i{
+    position: relative;
+    display: block;
+    width: 46px;
+    height: 37px;
+    left: 50%;
+    top: 3px;
+    margin-left: -23px;
+    z-index: 1;
+    background: url("../images/icos.png") no-repeat;
+    background-position: 2px 0px;
+}
+.sidebar .links tr td i:hover{
+    background: url("../images/icos.png") no-repeat;
+    background-position: 2px -50px;
+
+    /*background-position: -133px 0px;*/
+}
+
+.sidebar .links tr td span{
+    position: relative;
+    top: 10px;
+    display: block;
+    width: 100%;
+    color: #334455;
+    line-height: 2;
+    text-align: center;
+    bottom: 36px;
+}
+
+/*左边游戏下载栏 end*/
+/*游戏中心*/
+.content{
+    position: relative;
+    left: 300px;
+    width: 900px;
+    /*height: 1000px;*/
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 #757;
+    transition: all  .5s;
+}
+.content:hover{
+    box-shadow: 0 0 20px 0 #757;
+}
+.content .mianContent{
+    /*border: 1px solid #404060;*/
+    /*height: 1000px;*/
+    width: 80%;
+    margin: 0 auto;
+}
+.mianContent .breadcrumb {
+    height: 101px;
+    background: url("../images/breadcrumb.jpg") repeat-x 0 0;
+}
+.mianContent .breadcrumb img {
+    position: relative;
+    left: -150px;
+    margin: 34px 0 0 0;
+}
+.mianContent .box{
+    height: 1000px;
+
+    border-color: #1d2734;
+    box-shadow: 0 0 10px 0 #757;
+    transition: all .5s;
+}
+.mianContent .box:hover{
+    box-shadow: 0 0 18px 0 #757;
+}
+.box .subTabTitle{
+    position: relative;
+    left: 0px;
+    top: 44px;
+    height: 37px;
+    /*border: 1px solid #404060;*/
+}
+
+
+.box .subTabTitle li a{
+
+    float: left;
+    margin-left:  5px;
+    color: #fff;
+    text-align: center;
+    padding: 10px 50px 8px;
+    background: #556677;
+    border: 1px solid #d6dee6;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+}
+
+.box .subTabTitle .active a{
+    background: #fff;
+    color: #556677;
+}
+.box .titleStep{
+    position: relative;
+    left: -150px;
+    font-size: 20px;
+    top: 80px;
+}
+.box .btn-download{
+    border-top: 1px solid #d6dee6;
+}
+.box .titleStep span{
+    width: 42px;
+    line-height: 42px;
+    border: 1px solid #d6dee6;
+    border-radius: 50%;
+    text-align: center;;
+    display: inline-block;
+}
+.box .btn-download-gold img{
+    position: relative;
+    top: 100px;
+    left: -150px;
+}
+
+/*.box .btn-download-gold img:hover{*/
+    /*box-shadow: 0 0 10px 0 #757;*/
+/*}*/
+
+.box .downloadState{
+     position: relative;
+     top: 100px;
+     left:-150px ;
+     line-height: 2.5;
+     font-size: 16px;
+     font-family: \5FAE\8F6F\96C5\9ED1;
+
+ }
+.box .downloadStateS{
+      position: relative;
+      top: 100px;
+      left:-150px ;
+      font-size: 14px;
+      font-family: \5FAE\8F6F\96C5\9ED1;
+  }
+.box .titleStepa{
+      position: relative;
+      top:150px;
+      left:-150px ;
+      font-size: 20px;
+
+}
+.box .titleStepa span{
+      width: 42px;
+      line-height: 42px;
+      border: 1px solid #d6dee6;
+      border-radius: 50%;
+      text-align: center;;
+      display: inline-block;
+}
+.box .columns{
+      position: relative;
+      top:230px;
+      left: -170px;
+      font-size: 20px;
+}
+.box .columns a{
+      border-radius:5px;
+      padding: 40px 40px;
+      margin-left: 20px;
+      text-align: center;
+      background: #446699;
+      color: #ffffff;
+}
+.http ,.bordertopbottom ,.bordertop{
+      line-height: 2.5;
+      font-size: 16px;
+      font-family: \5FAE\8F6F\96C5\9ED1;
+}
+.http{
+      position: relative;
+      top: 270px;
+      left:-150px ;
+
+}
+.bordertopbottom{
+      position: relative;
+      top: 270px;
+      left:-113px ;
+      text-align: center;
+}
+.bordertop{
+      position: relative;
+
+      top: 270px;
+      font-size: 14px;
+      left: 100px;
+}
+/*主体end*/
+footer{
+      display: block;
+      background: #1d2734;
+      height: 134px;
+      font-size: 12px;
+      margin-top: 10px;
+}
+footer .footer_tip{
+
+      text-align:center;
+      color:white;
+      padding-top:25px;"
+}
+footer .wrap{
+      overflow: hidden;
+      background: url("../images/footer_logo.png") no-repeat 0 12px;
+      position: relative;
+      width: 1016px;
+      margin: 0 auto;
+}
+footer .wrap .pad{
+      margin: 0  300px;
+      color: #666666;
+}
+footer .wrap .botp1 a{
+     color: #666666;
+}

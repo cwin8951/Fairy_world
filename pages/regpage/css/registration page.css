@@ -1,0 +1,271 @@
+*{
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   text-decoration:none
+}
+
+body {
+    background:url(../images/b-bg.jpg) no-repeat 50% 102px
+}
+/*头部版心*/
+.w{
+    width: 1224px;
+    margin:0 auto;
+}
+/*头部开始结束*/
+.hair{
+    background: url(../images/bg_2.png) no-repeat center;
+    height: 5px;
+}
+.hairButton{
+    /*height:98px;*/
+    line-height: 98px ;
+}
+
+.log {
+    float: left;
+}
+.log img,.log2 img{
+    margin: 10px 20px;
+    transition: all .5s;
+}
+.log img:hover{
+    box-shadow: 0 0 10px 0 #757;
+}
+/*头部结束*/
+
+/*主体开始*/
+
+/*主体版心*/
+.wa{
+      width: 744px;
+}
+.interior{
+    height: 744px;
+    width:854px;
+    background-color: #fff;
+    margin: auto;
+    box-shadow: 0 0 10px 0 #757;
+    transition: all .5s;
+
+}
+.interior:hover{
+    top: -5px;
+    box-shadow: 0 0 40px 0 #757;
+}
+.apparatus{
+    height: 591px;
+    margin: 0 auto;
+
+}
+.maw{
+    color: #666;
+    font-size: 22px;
+    font-weight: 500;
+    padding-top: 46px;
+    margin-left: 30px;
+    letter-spacing: 2px;
+}
+.inputes{
+    height: 50px;
+    border: 1px solid #775577;
+}
+.content{
+    margin: 0 auto;
+    width: 600px;
+    height: 550px;
+
+
+}
+.content input[type=text]{
+    width: 200px;
+    height: 20px;
+    border: none;
+}
+
+.txttwo,.txtthree,.txtfour,.txttive,.txtsix{
+
+    margin-top: 28px;
+    margin-left:25%;
+    border: 1px solid #d7d7d7;
+    width: 49%;
+    height: 48px;
+    text-align: center;
+    line-height: 50px;
+
+}
+.txtone {
+    height: 40px;
+    margin-top: 28px;
+    margin-left:25%;
+    border: none;
+    width: 49%;
+    height: 48px;
+    text-align: center;
+    line-height: 50px;
+
+}
+.txtone span{
+    display: inline-block;
+    font-size: 23px;
+    line-height: 50px;
+    text-align: center;
+    height: 40px;
+    width: 49%;
+    height: 48px;
+    float: left;
+}
+.txtone span:nth-child(1){
+    border-bottom:1px solid #ff7c51 ;
+    color: #ff7c51;
+}
+.txtone span:nth-child(2){
+    border-bottom:1px solid #d7d7d7;
+}
+.txtone .txtones a{
+    color: #ff7c51;
+}
+.txtone .txtonea a{
+    color: #d7d7d7;
+}
+.txttwo input,.txtthree input,.txtfour input{
+    outline:medium;
+}
+.txttwo input{
+    padding: 10px;
+    border-style:none;
+
+}
+.txttive {
+    font-size: 14px;
+    border: none;
+}
+.txtthree span  a{
+    background-color: #EDEDED;
+    font-size: 14px;
+    padding-bottom: 11px;
+    padding-top: 12px;
+    padding-right: 3px;
+    padding-left: 4px;
+    color: #666;
+}
+
+.txtsix{
+    color: #ffffff;
+    background-color: red;
+    box-shadow: 0 0 5px 0 #757;
+    transition: all .5s;
+}
+.txtsix a:nth-child(1){
+    color: #ffffff;
+}
+.txtsix:hover{
+    top: -5px;
+    box-shadow: 0 0 15px 0 #757;
+
+}
+.content p{
+    text-align: center;
+    margin-left:25%;
+}
+
+/*foot开始*/
+.ws{
+    width: 1226px;
+    margin:0 auto;
+}
+footer{
+    position: relative;
+    top: 22px;
+
+    height: 334px;
+    width:  100%;
+    background-color: #fff;
+}
+
+.frame {
+    position: relative;
+    top: 80px;
+    height: 177px;
+
+}
+.frameleft{
+    width: 635px;
+    height: 177px;
+
+}
+.frameleft .framea li{
+    padding-right:34px ;
+    margin-right: 34px;
+    float: left;
+    border-right: 2px solid  #757;
+
+}
+.frameleft .framea li:last-child{
+    border: none;
+}
+.frameleft .framea li a{
+     color: black;
+     font-size: 14px;
+}
+.frameleft .frameb{
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 15px;
+    margin-left:0 ;
+    /*letter-spacing: 1px;*/
+    /*font-family: "微软雅黑";*/
+}
+.frameleft .framec{
+    margin-top: 24px;
+    font-size: 14px;
+    line-height: 2;
+    margin-left:0 ;
+    text-align: left;
+    /*letter-spacing: 1px;*/
+
+}
+.frameleft .framec a{
+   color: #000;
+}
+.frameleft .framec span{
+    display: inline-block;
+    width: 20px;
+    height: 22px;
+    background: url(../images/gongan.jpg) no-repeat;
+    margin: 0 9px 0 30px;
+}
+.frameleft .framed{
+    margin-top: 10px;
+}
+.frameleft .framed .frameicon{
+    display:inline-block;
+    background: url(../images/icon_e.jpg) no-repeat;
+    width: 76px;
+    height: 35px;
+}
+.frameleft .framed .frameicona{
+    display:inline-block;
+    background:url("../images/wenhuajingying.png") no-repeat;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+}
+.framecenter {
+    position:absolute ;
+    top: 5px;
+    left: 650px;
+    display: inline-block;
+    /*float: right;*/
+}
+.framecenter img{
+
+   transition: all .5s;
+}
+.framecenter img:hover{
+
+    /*display: none;*/
+}
+
+/*foot结束*/

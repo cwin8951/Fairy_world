@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.xzmm img{
+    width:200px;
+    height: 300px;
+}
+/*body{ background-color: #313131; }*/
+@keyframes fn{
+    0% {transform:rotateX(-15deg) rotateY(0deg);}
+    100%{transform:rotateX(-15deg) rotateY(360deg);}
+
+}
+@-moz-keyframes fn{
+    0% {transform:rotateX(-15deg) rotateY(0deg);}
+    100%{transform:rotateX(-15deg) rotateY(360deg);}
+}
+@-ms-keyframes fn{
+    0% {transform:rotateX(-15deg) rotateY(0deg);}
+    100%{transform:rotateX(-15deg) rotateY(360deg);}
+}
+@-webkit-keyframes fn{
+    0% {transform:rotateX(-15deg) rotateY(0deg);}
+    100%{transform:rotateX(-15deg) rotateY(360deg);}
+}
+.xzmm{
+    width:200px;
+    height:300px;
+    position:relative;
+    margin:auto;
+    margin-top:150px;
+    transform-style:preserve-3d;
+    transform:rotateX(-10deg);
+    animation: fn 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: relative
+}
+.xzmm:hover{
+    animation-play-state: paused;
+}
+.xzmm>div{
+    width:200px;
+    height:300px;
+    position: absolute;
+    left:0;
+    top:0;
+
+}
