@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width" />
-<title>《仙侠世界2》11111111</title>
+<title>《仙侠世界2》</title>
 	<link rel="stylesheet" href="css/base.css"/>
 	<!--<script type="text/javascript" src="http://g.huceo.com/weixin/qw/jquery.min.js"></script>-->
 	<script src="js/jQ/jquery-1.12.2.js"></script>
+	<script charset="utf-8" src="http://wpa.b.qq.com/cgi/wpa.php"></script>
       <script type="text/javascript">
         var dataForWeixin = {
 //              appId: "gh_ff79a97cd7f3",
@@ -102,6 +103,7 @@ canvas {
 </head>
 <div style="text-align:center;clear:both">
 </div>
+	<div id="BizQQWPA"></div>
 <!--<span class="btn"><a href="">主页</a></span>-->
 <div class="media">
 	<video autoplay loop name="media" id="media">
@@ -110,6 +112,8 @@ canvas {
 </div>
 <canvas id="canvas"></canvas>
 <script>
+	var BizQQWPA = document.getElementById( 'BizQQWPA' ),
+	BizQQWPA.addCustom({aty: '0', a: '0', nameAccount: 800178080, selector: 'BizQQWPA'});
 	window.requestAnimFrame = ( function() {
 		return window.requestAnimationFrame ||
 					window.webkitRequestAnimationFrame ||
