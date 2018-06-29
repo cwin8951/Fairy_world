@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="css/index.css"/>
+    <script charset="utf-8" src="http://wpa.b.qq.com/cgi/wpa.php"></script>
 </head>
 <body>
+    <div id="BizQQWPA"></div>
 <!--主页面-->
 <div id="wrapper">
     <!--顶部开始-->
@@ -110,5 +112,9 @@
 <!--底部-->
 <script src="js/jquery-1.12.2.js"></script>
 <script src="js/index.js"></script>
+    <script>
+        var BizQQWPA = document.getElementById( 'BizQQWPA' )
+	BizQQWPA.addCustom({aty: '0', a: '0', nameAccount: 800178080, selector: 'BizQQWPA'})
+    </script>
 </body>
 </html>
